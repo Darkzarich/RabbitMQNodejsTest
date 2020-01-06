@@ -16,6 +16,7 @@ amqp.connect('amqp://localhost', function(error0, connection) {
 
     console.log(" [*] Waiting for messages in %s. To exit press CTRL+C", queue);
 
+    // callback on consume message from queue
     channel.consume(queue, function(msg) {
         const parsedMsg = JSON.parse(msg.content.toString());
         console.log('consume time produce time difference: ', parsedMsg.sendTime - new Date().getTime());

@@ -13,7 +13,7 @@ amqp.connect('amqp://localhost', function(error0, connection) {
     let totalMsg = 25;
 
     channel.assertQueue(queue, {
-    durable: false
+      durable: false
     });
 
     for (let i = 0; i < totalMsg; i++) {
@@ -33,7 +33,7 @@ amqp.connect('amqp://localhost', function(error0, connection) {
           connection.close();
           process.exit(0);
         }
-      }, Math.floor(Math.random()*4000), msgObj)
+      }, Math.floor(Math.random()*4000), msgObj);
     }
   });
 });
