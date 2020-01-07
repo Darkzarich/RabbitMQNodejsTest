@@ -8,6 +8,7 @@ amqp.connect('amqp://localhost', function(error0, connection) {
     if (error1) {
       throw error1;
     }
+    
     let exchange = 'logs';
 
     channel.assertExchange(exchange, 'fanout', {
