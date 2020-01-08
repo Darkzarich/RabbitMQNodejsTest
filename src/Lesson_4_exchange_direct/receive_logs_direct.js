@@ -26,7 +26,7 @@ amqp.connect('amqp://localhost', function(error0, connection) {
     channel.assertQueue('', {
       // the same as in previous lesson it will destroy the queue
       exclusive: true
-      }, function(error2, q) {
+    }, function(error2, q) {
         if (error2) {
           throw error2;
         }
